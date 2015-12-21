@@ -8,8 +8,8 @@ module.exports = function(grunt) {
                 banner: '//---------------------------------------\n'
             },
             dist: {
-                src: ['components/js/*.js'],
-                dest: 'build/development/js/scripts.js'
+                src: ['components/js/layout.js'],
+                dest: 'build/development/js/layout.js'
             }
         }, //concat
         
@@ -51,12 +51,20 @@ module.exports = function(grunt) {
             scripts: {
                 files: [
                     'build/development/**/*.html',
-                    'components/scripts/**/*.js',
+                    'components/js/**/*.js',
                     'components/sass/**/*.scss'
                 ],
                 tasks: ['concat', 'sass']
             }
-        } //watch
+        }, //watch
+        
+        uglify: {
+            build: {
+                files: {
+                    'build/development/js/layout.min.js': 'build/development/js/layout.js'
+                }
+            }
+        } //uglify
     });
     
     //Load plugins
@@ -65,6 +73,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     
-    grunt.registerTask('default', ['connect', 'bower_concat', 'concat', 'sass', 'watch']);
+    grunt.registerTask('default', ['connect', 'bower_concat', 'concat', 'sass', 'watch', 'uglify']);
 };

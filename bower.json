@@ -1,0 +1,22 @@
+{
+  "name": "photo-gallery",
+  "description": "Photo gallery",
+  "main": "components/js/gallery.js",
+  "authors": [
+    "MarcusG <marcusguygriffiths@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,0 +1,20 @@
+ul {
+  width: 80%;
+  margin: 10px auto; }
+  ul .grid-sizer, ul li {
+    width: 23.5%;
+    margin-left: 1%; }
+  ul li img {
+    width: 100%; }
+
+@media screen and (max-width: 1200px) {
+  ul {
+    width: 90%; }
+    ul li, ul .grid-sizer {
+      width: 31.5%; } }
+
+@media screen and (max-width: 800px) {
+  ul {
+    width: 90%; }
+    ul li, ul .grid-sizer {
+      width: 48%; } }
