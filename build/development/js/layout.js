@@ -163,7 +163,7 @@
                 var resizeTimer;
                 $(window).resize(function() {
                     clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(callback, 500);
+                    resizeTimer = setTimeout(callback, 200);
                 });
             }
             
